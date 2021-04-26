@@ -1,0 +1,13 @@
+name: TarotreadR
+title: TarotreadR
+username:
+account: meghansaha
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3828202
+bundleId: 4522162
+url: https://meghansaha.shinyapps.io/TarotreadR/
+when: 1619467482.9151
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: csstest.css|csstest.html|csstesting.html|csstesting.Rmd|custom.html|csstest/app.R|csstest/www/custom.css|csstest/www/custom.html|scripts/tarot_process_old.R|test
