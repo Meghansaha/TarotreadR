@@ -99,6 +99,15 @@ ui <- fluidPage(title ="TarotreadR",
             background-color:#1f1f1f;
             opacity: 0.95;
         }
+             
+        #keywordslookup{
+            text-align:center;
+            border: 10px solid #000000;
+            border-radius: 15px 15px 15px 15px;
+            background-color:#1f1f1f;
+            opacity: 0.95;
+            margin: %50 auto;
+        }
         
          </style>")),
     
@@ -120,14 +129,30 @@ tags$script(src = "mobile_detect.js"),
 
 #About panel==== 
 
-        tabPanel(style = "background-color: #222; opacity: .90;", "About", 
-                 HTML('&emsp;'),
+        tabPanel(style = "background-color: #222;", "About", 
+                 HTML("<br>"),
+                 HTML('<center>'),
                  "This Shiny app was created for the", 
                  HTML("<a href= 'https://blog.rstudio.com/2021/03/11/time-to-shiny/'>2021 Shiny Contest hosted by R Studio</a>"), 
-                 "by Meghan Harris.",
-                 HTML("<br><br>"),
+                 "by",
+                 HTML("<a href = 'https://twitter.com/meghansharris'>Meghan Harris.</a>"),
+                 HTML("</center>"),
                  HTML('&emsp;'),
-                 "Tarot cards have existed for centuries. Although originally designed as a standard playing card game, tarot has involved into a practice of divination, self-help guidance, and general entertainment. That being said, this app should be used for entertainment purposes only. Enjoy! - More formatted info will go here when I feel like it."),
+                 HTML("<h4>"),"General Information",HTML("</h4>"),
+                 "Tarot cards have existed for centuries. The tarot card deck consist of 78 total cards divided into two main categories. The major arcana and the minor arcana. The major arcana cards are consist of 22 trump cards that are numbered from 0 to 21, starting with 'The Fool' and ending with 'The World' respectively. These cards are typically said to symbolize major life themes.",HTML("<br><br>"),"The other 56 cards are the minor arcana. The minor arcana consists of four suits (Pentacles, Swords, Cups, and Wands). The minor arcana cards are said to depict everyday themes that can change more frequently day-to-day. It is also believed that each court symbolizes a different domain of themes. For example, pentacles are associated with finances and material possesions. Cups are emotions and feelings. Wands are energy, motivation, and passion, and swords are thoughts and logic.",HTML("<br><br>"),"Although originally designed as a standard playing card game, tarot has involved into a practice of divination, self-help guidance, and general entertainment. That being said, this app should be used for entertainment purposes only. The thought behind this app was a means to practice reactivity in Shiny in an alternative and fun way.",
+HTML("<br>"),
+HTML("<h4>"),"How to Use This App",HTML("</h4><br>"),
+"This app provides four different tabs of interactivity:",
+HTML("<br><br>"),
+HTML("<dl><strong><dt>One Card Draw:</dt></strong>
+     <dd>Typically used for simple 'Yes/No' questions but could also be used for simple meditation and a daily focus.</dd><br>
+     <strong><dt>Two Card Draw:</dt></strong>
+     <dd>Typically used for 'decision-making' questions but could also be used for instances where two perspectives are desired like 'mental and physical', 'yes and no', or 'situation and outcome'.</dd><br>
+     <strong><dt>Three Card Draw:</dt></strong>
+     <dd>Can be used for more involved spreads like 'past, present, future', 'situation, action required, outcome', and thinking through three seperate choices to decision that needs to be made.</dd><br>
+    <strong><dt>Card Lookup:</dt></strong>
+     <dd>Can be used to look up all tarot cards and keywords in the deck without drawing the cards for a reading.</dd></dl>")),
+
 
 #One Card Draw panel====
         tabPanel("One Card Draw",     
@@ -137,7 +162,7 @@ tags$script(src = "mobile_detect.js"),
                  fixedRow(id = "row", withAnim(),
                           column(width = 12, align = "center", div(style ="display: inline-block; center-align;",id="imageone1",tags$img(imageOutput("imageone1", inline = TRUE))),
                  HTML("<br><br>"),
-                 hidden(div(style = "display: inline-block; center-align; width: 15%;", id="kwone1",tableOutput("keywordsone1")))))),
+                 hidden(div(style = "display: inline-block; center-align; width: 35%;", id="kwone1",tableOutput("keywordsone1")))))),
  
 #Two Card Draw panel====        
         tabPanel("Two Card Draw", 
@@ -176,7 +201,29 @@ tags$script(src = "mobile_detect.js"),
                                       tags$img(imageOutput("imagethree3", 
                                                            inline = TRUE))),
                                   hidden(div(style = "display: inline-block; margin: 3%; width: 55% ",
-                                      id="kwthree3",tableOutput("keywordsthree3"))))))))
+                                      id="kwthree3",tableOutput("keywordsthree3")))))),
+
+# Card Lookup Tab====
+tabPanel("Card Lookup",
+         sidebarLayout(sidebarPanel(style = "background-color: #222; opacity: .90; height: '100%';",
+                                    selectInput("cardlookup",
+                                                "Tarot Card Lookup:",
+                                                choices = mastercardset),
+                                    selectInput("reversed",
+                                                "Reversed Position?",
+                                                choices = c("Yes","No")),
+                                    actionButton("cardsearch", " Search",
+                                                 icon("search-plus"), 
+                                                 style="color: #fff; background-color: #000000; border-color: #2e6da4"),
+                                    
+         ),
+                       mainPanel(fixedRow(id = "row", withAnim(),
+                                          column(width = 12, align = "center", div(style ="display: inline-block; center-align;",id="lookupimage",tags$img(imageOutput("lookupimage", inline = TRUE))),
+                                                 HTML("<br><br>"),
+                                                 hidden(div(style = "display: inline-block; center-align; width: 35%;", id="kwlookup",tableOutput("keywordslookup")))))))
+         
+
+)))
 
 #Defining the server logic to construct card/info randomizer==== 
 server <- function(input, output, session) {
@@ -190,11 +237,11 @@ server <- function(input, output, session) {
         set.seed(seednum)
         
         #Randomly selecting one card from the deck. Pulling it's relative file path... 
-        onecardfile <- unlist(lapply(sample(testtarot$Card,1), function(x) testtarot$Path[testtarot$Card == x]))
+        onecardfile <- unlist(lapply(sample(tarotdeck$Card,1), function(x) tarotdeck$Path[tarotdeck$Card == x]))
         onecardfile1 <- onecardfile[1]
         
         #...and title for alt text.
-        onecardalt1 <- testtarot$Card[testtarot$Path == onecardfile1]
+        onecardalt1 <- tarotdeck$Card[tarotdeck$Path == onecardfile1]
         
         #Staging the first image for rendering.
         output$imageone1 <- renderImage({
@@ -206,7 +253,7 @@ server <- function(input, output, session) {
                  alt = onecardalt1)}, deleteFile = FALSE)
         
         #Staging the keywords for the first card for rendering.
-        output$keywordsone1 <- renderTable(testtarot %>% filter(Path == onecardfile1) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
+        output$keywordsone1 <- renderTable(tarotdeck %>% filter(Path == onecardfile1) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
         
     })
 
@@ -230,13 +277,13 @@ server <- function(input, output, session) {
         }
 
 #Pulling their relative file paths
-        twocardfile <- unique(unlist(lapply(twocards, function(x) testtarot$Path[testtarot$Card == x])))
+        twocardfile <- unique(unlist(lapply(twocards, function(x) tarotdeck$Path[tarotdeck$Card == x])))
         twocardfile1 <- twocardfile[1]
         twocardfile2 <- twocardfile[2]
 
 #...and titles for alt text.
-        twocardalt1 <- testtarot$Card[testtarot$Path == twocardfile1]
-        twocardalt2 <- testtarot$Card[testtarot$Path == twocardfile2]
+        twocardalt1 <- tarotdeck$Card[tarotdeck$Path == twocardfile1]
+        twocardalt2 <- tarotdeck$Card[tarotdeck$Path == twocardfile2]
         
 #Staging the first image for rendering.
         output$imagetwo1 <- renderImage({
@@ -257,10 +304,10 @@ server <- function(input, output, session) {
                  alt = twocardalt2)}, deleteFile = FALSE)
         
 #Staging the keywords for the first card for rendering.
-        output$keywordstwo1 <- renderTable(testtarot %>% filter(Path == twocardfile1) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
+        output$keywordstwo1 <- renderTable(tarotdeck %>% filter(Path == twocardfile1) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
         
 #Staging the keywords for the second card for rendering.       
-        output$keywordstwo2 <- renderTable(testtarot %>% filter(Path == twocardfile2) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
+        output$keywordstwo2 <- renderTable(tarotdeck %>% filter(Path == twocardfile2) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
     })
     
 #Three Card Draw Server Logic====
@@ -281,15 +328,15 @@ server <- function(input, output, session) {
         }
         
 #Pulling their relative file paths
-        threecardfile <- unique(unlist(lapply(threecards, function(x) testtarot$Path[testtarot$Card == x])))
+        threecardfile <- unique(unlist(lapply(threecards, function(x) tarotdeck$Path[tarotdeck$Card == x])))
         threecardfile1 <- threecardfile[1]
         threecardfile2 <- threecardfile[2]
         threecardfile3 <- threecardfile[3]
         
 #...and titles for alt text.
-        threecardalt1 <- testtarot$Card[testtarot$Path == threecardfile1]
-        threecardalt2 <- testtarot$Card[testtarot$Path == threecardfile2]
-        threecardalt3 <- testtarot$Card[testtarot$Path == threecardfile3]
+        threecardalt1 <- tarotdeck$Card[tarotdeck$Path == threecardfile1]
+        threecardalt2 <- tarotdeck$Card[tarotdeck$Path == threecardfile2]
+        threecardalt3 <- tarotdeck$Card[tarotdeck$Path == threecardfile3]
         
 #Staging the first image for rendering.
         output$imagethree1 <- renderImage({
@@ -321,15 +368,41 @@ server <- function(input, output, session) {
         
         
 #Staging the keywords for the first card for rendering.
-        output$keywordsthree1 <- renderTable(testtarot %>% filter(Path == threecardfile1) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
+        output$keywordsthree1 <- renderTable(tarotdeck %>% filter(Path == threecardfile1) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
         
 #Staging the keywords for the second card for rendering.       
-        output$keywordsthree2 <- renderTable(testtarot %>% filter(Path == threecardfile2) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
+        output$keywordsthree2 <- renderTable(tarotdeck %>% filter(Path == threecardfile2) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
     
 #Staging the keywords for the third card for rendering.       
-    output$keywordsthree3 <- renderTable(testtarot %>% filter(Path == threecardfile3) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
+    output$keywordsthree3 <- renderTable(tarotdeck %>% filter(Path == threecardfile3) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
 })
-    
+
+#Staging for Cardlookup tab====
+#Defining reactivity for "cardsearch" = "Card Lookup Button". 
+    observeEvent(input$cardsearch, {
+        
+#Setting logic for card position.
+        cardlookupname <- ifelse(input$reversed == "Yes",paste0(input$cardlookup," Reversed"),input$cardlookup)
+        
+#Pulling the file path with card name.
+        cardlookuppath <- tarotdeck$Path[tarotdeck$Card == cardlookupname]
+        
+#Pulling alt text.
+        cardlookupalt <- tarotdeck$Card[tarotdeck$Path == cardlookuppath]
+        
+        #Staging the first image for rendering.
+        output$lookupimage <- renderImage({
+            # Return a list
+            list(src = cardlookuppath, 
+                 contentType = "image/png",
+                 width = "30%",
+                 align = "center",
+                 alt = cardlookupalt)}, deleteFile = FALSE)
+        
+        #Staging the keywords for the first card for rendering.
+        output$keywordslookup <- renderTable(tarotdeck %>% filter(Path == cardlookuppath) %>% select(Keywords), width = "100%", align ="c", sanitize.text.function=identity, bordered = FALSE)
+        
+    })
 
 #Adding the toggle for the keyword divs====
 #This allows the information to only show AFTER the action button is clicked.
@@ -340,6 +413,7 @@ server <- function(input, output, session) {
         toggle(id = "kwthree1", condition = (input$button3 > 0))
         toggle(id = "kwthree2", condition = (input$button3 > 0))
         toggle(id = "kwthree3", condition = (input$button3 > 0))
+        toggle(id = "kwlookup", condition = (input$cardsearch > 0))
     })
     
 # Card/info animations====
@@ -370,8 +444,17 @@ server <- function(input, output, session) {
         startAnim(session, "kwthree3", "flipInX")
         delay(500, insertUI(selector = "#button1",
                             where = "afterEnd",
-                            ui = tags$audio(src = "fairyglitter.wav", type = "audio/wav", autoplay = F, controls = NA, style="display:none;")
-        ))})
+                            ui = tags$audio(src = "fairyglitter.wav", type = "audio/wav", autoplay = F, controls = NA, style="display:none;")))})
+
+        
+#Card Lookup Pull===
+        observeEvent(input$cardsearch, {startAnim(session, "lookupimage", "fadeInDown")
+            startAnim(session, "kwlookup", "flipInX")
+            delay(500, insertUI(selector = "#cardsearch",
+                                where = "afterEnd",
+                                ui = tags$audio(src = "ding.wav", type = "audio/wav", autoplay = F, controls = NA, style="display:none;")))})
+
+
 }
 
 shinyApp(ui = ui, server = server)

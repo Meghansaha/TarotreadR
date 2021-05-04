@@ -21,11 +21,11 @@ imagepaths <- imagepaths[order(match(imagepaths,tarotorder_refpath))]
 imagepaths <- sapply(imagepaths, function(x) paste0("images/",x))
 
 # Plugging the cards into the Tarot master Table====
-testtarot <- tarot_master %>%
+tarotdeck <- tarot_master %>%
   mutate(Path = imagepaths)
 
 # Pulling unique reference for card pulls====
-mastercardset <- tarotorder_ref[1:(nrow(testtarot)/2)]
+mastercardset <- tarotorder_ref[1:(nrow(tarotdeck)/2)]
 
 # Setting up a reference for the card positions====
 reversalset <- c("Reversed","")

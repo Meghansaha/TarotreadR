@@ -1,7 +1,7 @@
 Card,Keywords,Reversed
 The Fool,Innocence<br>Foolishness<br>Beginnings<br>Spontaneity,No
 The Magician,Manifestation<br>Adaptation<br>Power<br>Inspiration,No
-The High Priestess,Intuition<br>Wisdom<br>Truth<br>Subconcious,No
+The High Priestess,Intuition<br>Wisdom<br>Truth<br>Subconscious,No
 The Empress,Nature<br>Beauty<br>Fertility<br>Femininity,No
 The Emperor,Structure<br>Father-Figure<br>Authority<br>Establishment,No
 The Hierophant,Spiritual Wisdom<br>Tradition<br>Organized Religion<br>Institutions ,No
@@ -20,12 +20,12 @@ The Star,Rejuvenation<br>Hope<br>Faith<br>Spirituality,No
 The Moon,Anxiety<br>Fear<br>Illusions<br>Unconscious,No
 The Sun,Celebration<br>Joy<br>Positivity<br>Warmth,No
 Judgement,Judgement<br>Absolution<br>Reflection<br>Awakening,No
-The World,Completion<br>Harmony<br>Acomplishment<br>Integration,No
+The World,Completion<br>Harmony<br>Accomplishment<br>Integration,No
 Ace of Cups,Intuition<br>New Emotions<br>Compassion<br>Love,No
 Two of Cups,Partnership<br>Unified Love<br>Connections<br>Unity,No
 Three of Cups,Community<br>Happiness<br>Collaboration<br>Friendships,No
 Four of Cups,Meditation<br>Apathy<br>Contemplation<br>Disconnection,No
-Five of Cups,Mourning<br>Failure<br>Pessimism<br>Dissapointment,No
+Five of Cups,Mourning<br>Failure<br>Pessimism<br>Disappointment,No
 Six of Cups,Childhood Memories<br>Joy<br>Restoration<br>Healing,No
 Seven of Cups,"Choices<br>Daydreaming<br>""Shiny Object"" Syndrome<br> Illusions",No
 Eight of Cups,Abandonment<br>Escapism<br>Walking Away<br>Disillusionment,No
@@ -36,14 +36,55 @@ Knight of Cups,Creativity<br>Idealist<br>Imagination<br>Romantic,No
 Queen of Cups,Compassion<br>Emotional Stability<br>Comfort<br>Intuition ,No
 King of Cups,Diplomatic<br>Balance<br>Compassion,No
 Ace of Pentacles,Financial/Career Opportunities<br>Prosperity<br>Manifestation<br>New Ventures,No
-The Fool Reversed,Reckless<br>Incosiderate<br>Risk-Taking,Yes
+Two of Pentacles,Balancing Decisions<br>Prioritization<br>Adapting to Change<br>Time Management,No
+Three of Pentacles,Teamwork<br>Learning<br>Collaboration<br>Building,No
+Four of Pentacles,Control<br>Frugal<br>Scarcity<br>Conservation,No
+Five of Pentacles,Poverty<br>Worry<br>Insecurity<br>Financial Loss,No
+Six of Pentacles,Giving<br>Receiving<br>Charity<br>Sharing,No
+Seven of Pentacles,Hard Work<br>Sustainability<br>Diligence<br>Investment,No
+Eight of Pentacles,Apprenticeship<br>High Standards<br>Mastery<br>Passion,No
+Nine of Pentacles,Abundance<br>Rewards<br>Luxury<br>Fruits of Labor,No
+Ten of Pentacles,Legacy<br>Wealth<br>Culmination<br>Long-term Success,No
+Page of Pentacles,Manifestation<br>Ambition<br>Skill Development<br>Diligence,No
+Knight of Pentacles,Responsibility<br>Productivity<br>Hard Work<br>Routine,No
+Queen of Pentacles,Nurturing<br>Creature Comforts<br>Practical<br>Financial Security,No
+King of Pentacles,Abundance<br>Discipline<br>Security<br>Leadership,No
+Ace of Wands,Creation<br>Inspiration<br>Willpower<br>Growth,No
+Two of Wands,Progress<br>Planning<br>Discovery<br>Making Decisions,No
+Three of Wands,Expansion<br>Progress<br>Looking Ahead<br>Foresight,No
+Four of Wands,Celebration<br>Community<br>Relaxation<br>Home,No
+Five of Wands,Competition<br>Conflict<br>Rivalry<br>Tension,No
+Six of Wands,Success<br>Victory<br>Self-Confidence<br>Public Reward,No
+Seven of Wands,Perseverance<br>Challenge<br>Maintaining Control<br>Protection,No
+Eight of Wands,Movement<br>Rapid Actions<br>Alignment<br>Quick Decisions,No
+Nine of Wands,Resilience<br>Courage<br>Grit<br>Test of Faith,No
+Ten of Wands,Burden<br>Accomplishment<br>Extra Responsibility<br>Completion,No
+Page of Wands,Exploration<br>Inspiration<br>Excitement<br>Ideas,No
+Knight of Wands,Impulsiveness<br>Action<br>Adventure<br>Fearlessness,No
+Queen of Wands,Determination<br>Independence<br>Courage<br>Confidence,No
+King of Wands,Entrepreneur<br>Overcoming Challenges<br>Honor<br>Leader,No
+Ace of Swords,Mental Clarity<br>New ideas<br>Breakthroughs<br>Sharp Mind,No
+Two of Swords,Difficult Decisions<br>Stalemate<br>Avoidance<br>Indecision,No
+Three of Swords,Heartbreak<br>Emotional Pain<br>Grief<br>Sorrow,No
+Four of Swords,Rest<br>Contemplation<br>Meditation<br>Restoration,No
+Five of Swords,Conflicts<br>Sneakiness<br>Defeat<br>Unbridled Ambition,No
+Six of Swords,Transition<br>Rite of Passage<br>Moving On<br>Releasing Baggage,No
+Seven of Swords,Betrayal<br>Deception<br>Acting Strategically<br>Trickery,No
+Eight of Swords,Imprisonment<br>Entrapment<br>Self-Victimization<br>Negative Thoughts,No
+Nine of Swords,Anxiety<br>Hopelessness<br>Depression<br>Trauma,No
+Ten of Swords,Failure<br>Painful Endings<br>Defeat<br>Lost,No
+Page of Swords,Curiosity<br>Restlessness<br>Thirst for Knowledge<br>Mental Energy,No
+Knight of Swords,Impulsiveness<br>Ambitious<br>Defending Beliefs<br>Fast-thinking,No
+Queen of Swords,Unbiased Judgment<br>Perceptiveness<br>Direct Communication<br>Complexity,No
+King of Swords,Discipline<br>Power<br>Truth<br>Authority,No
+The Fool Reversed,Reckless<br>Inconsiderate<br>Risk-Taking,Yes
 The Magician Reversed,Out of touch<br>Manipulation<br>Illusions<br>Poor Planning,Yes
 The High Priestess Reversed,Secrets<br>Repressed Feelings<br>Withdrawal<br>Lost,Yes
 The Empress Reversed,Dependence<br>Creative Block<br>Emptiness,Yes
 The Emperor Reversed,Inflexibility<br>Coldness<br>Domination<br>Tyranny,Yes
 The Hierophant Reversed,Rebellion<br>Personal Beliefs<br>New Approaches<br>Freedom,Yes
 The Lovers Reversed,Self-love<br>Disharmony<br>Imbalance,Yes
-The Chariot Reversed,Agression<br>Opposition<br>Lack of Control<br>Lack of Direction,Yes
+The Chariot Reversed,Aggression<br>Opposition<br>Lack of Control<br>Lack of Direction,Yes
 Strength Reversed,Inner Strength<br>Insecurity<br>Self Doubt,Yes
 The Hermit Reversed,Isolation<br>Withdrawal<br>Loneliness<br>Loss,Yes
 Wheel of Fortune Reversed,No Control<br>Breaking Cycles<br>Bad Luck<br>Resistance to Change,Yes
@@ -61,7 +102,7 @@ The World Reversed,Delays<br>Incompletion<br>Short-cuts<br>No Closure,Yes
 Ace of Cups Reversed,Self-love<br>Emotional Loss<br>Intuition<br>Creative Block,Yes
 Two of Cups Reversed,Imbalance<br>Breakups<br>Broken Communication<br>Distrust,Yes
 Three of Cups Reversed,Independence<br>Gossip<br>Alone Time<br>Overindulgence,Yes
-Four of Cups Reversed,Acceptance<br>Retreaat<br>Choosing Happiness<br>Withdrawal,Yes
+Four of Cups Reversed,Acceptance<br>Retreat<br>Choosing Happiness<br>Withdrawal,Yes
 Five of Cups Reversed,Personal Setbacks<br>Finding Peace<br>Moving On<br>Self-forgiveness,Yes
 Six of Cups Reversed,Living in the Past<br>Leaving Home<br>Forgiveness<br>Independence,Yes
 Seven of Cups Reversed,Lacking Purpose<br>Personal Values<br>Diversion<br>Overwhelmed,Yes
@@ -73,3 +114,44 @@ Knight of Cups Reversed,Overactive Imagination<br>Moodiness<br>Jealous<br>Disapp
 Queen of Cups Reversed,Insecurity<br>Inner-feelings<br>Dependence<br>Self-care,Yes
 King of Cups Reversed,Emotional Manipulation<br>Moodiness<br>Self-compassion<br>Bad Advice,Yes
 Ace of Pentacles Reversed,Lost Opportunities<br>Lack of Planning<br>Bad Investments,Yes
+Two of Pentacles Reversed,Over-committed<br>Overwhelmed<br>Disorganization<br>Imbalance,Yes
+Three of Pentacles Reversed,Group Conflicts<br>Misalignment<br>Lack of teamwork<br>Working Alone,Yes
+Four of Pentacles Reversed,Over-spending<br>Possessiveness<br>Greed<br>Stinginess,Yes
+Five of Pentacles Reversed,Recovery<br>Financial Recovery<br>Improvement<br>Spiritual Poverty,Yes
+Six of Pentacles Reversed,One-sided Charity<br>Stinginess<br>Unpaid Debts<br>Self-Care,Yes
+Seven of Pentacles Reversed,Distractions<br>Limited Success<br>Work without Results<br>Short-term Vision,Yes
+Eight of Pentacles Reversed,Lack of Passion<br>Self-Development<br>Unmotivated<br>Misdirected Activity,Yes
+Nine of Pentacles Reversed,Reckless Spending<br>Self-worth<br>False Success<br>Hustling,Yes
+Ten of Pentacles Reversed,Financial Loss<br>Lack of Stability<br>Lack of Resources,Yes
+Page of Pentacles Reversed,Greediness<br>Lack of Progress<br>Laziness<br>Procrastination,Yes
+Knight of Pentacles Reversed,Feeling Stuck<br>Obsessiveness<br>Perfectionism<br> Work without Reward,Yes
+Queen of Pentacles Reversed,Jealousy<br>Financial Independence<br>Self-centered<br>Self-care,Yes
+King of Pentacles Reversed,Financially Inept<br>Indulgence<br>Obsessed with Wealth<br>Greed,Yes
+Ace of Wands Reversed,Lack of Direction<br>Lack of Passion<br>Delays<br>Boredom,Yes
+Two of Wands Reversed,Fear of Change<br>Personal Goals<br>Playing it Safe<br>Inner Alignment,Yes
+Three of Wands Reversed,Unexpected Delays<br>Obstacles<br>Lack of Foresight<br>Frustration,Yes
+Four of Wands Reversed,Home Conflicts<br>Personal Celebration<br>Lacking Support<br>Transition,Yes
+Five of Wands Reversed,Inner Conflict<br>Respecting Differences<br>Tension Release<br>Avoiding Conflict,Yes
+Six of Wands Reversed,Excess Pride<br>Fall from Grace<br>Punishment<br>Personal Achievement,Yes
+Seven of Wands Reversed,Exhaustion<br>Destroyed Confidence<br>Overwhelmed<br>Quitting,Yes
+Eight of Wands Reversed,Panic<br>Resisting Change<br>Slowing Down<br>Frustration,Yes
+Nine of Wands Reversed,Inner Resources<br>Exhaustion<br>Paranoia<br>Questioning Motives,Yes
+Ten of Wands Reversed,Burnt Out<br>Doing it All<br>Inability to Delegate<br>Release,Yes
+Page of Wands Reversed,Redirecting Energy<br>Procrastination<br>Self-limiting Beliefs<br>Creating Conflict,Yes
+Knight of Wands Reversed,Anger<br>Passion Project<br>Recklessness<br>Scattered Energy,Yes
+Queen of Wands Reversed,Self-respect<br>Selfishness<br>Introverted<br>Insecurity,Yes
+King of Wands Reversed,Overbearing<br>Ruthless<br>Unrealistic Expectations<br>Haste,Yes
+Ace of Swords Reversed,Clouded Judgement<br>Confusion<br>Rethinking an Idea<br>Chaos,Yes
+Two of Swords Reversed,Lesser of Two Evils<br>Information Overload<br>No Right Choice<br>Stalemate,Yes
+Three of Swords Reversed,Negative Self-talk<br>Recovery<br>Forgiveness<br>Moving On,Yes
+Four of Swords Reversed,Stress<br>Deep Contemplation<br>Burnout<br>Stagnation,Yes
+Five of Swords Reversed,Making Amends<br>Forgiveness<br>Reconciliation<br>Lingering Resentment,Yes
+Six of Swords Reversed,Emotional Baggage<br>Unfinished Business<br>Resisting Change<br>Personal Transition,Yes
+Seven of Swords Reversed,Imposter Syndrome<br>Rethinking Approaches<br>Keeping Secrets<br>Coming Clean,Yes
+Eight of Swords Reversed,Self-acceptance<br>Inner-critic<br>Freedom<br>Releasing Negative Thoughts,Yes
+Nine of Swords Reversed,Inner Turmoil<br>Despair<br>Deep-seated Fears<br>Reaching Out,Yes
+Ten of Swords Reversed,Inevitable End<br>Regeneration<br>Recovery,Yes
+Page of Swords Reversed,Self-expression<br>Deception<br>Haste<br>All Talk No Action,Yes
+Knight of Swords Reversed,Unpredictability<br>Restless<br>No Direction<br>Burnout,Yes
+Queen of Swords Reversed,Cold-hearted<br>Cruel<br>Overly Emotional<br>Bitter,Yes
+King of Swords Reversed,Manipulative<br>Quiet Power<br>Weakness<br>Inner Truth,Yes
