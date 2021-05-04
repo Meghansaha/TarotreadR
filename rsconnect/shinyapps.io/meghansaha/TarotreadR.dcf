@@ -5,8 +5,8 @@ account: meghansaha
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3828202
-bundleId: 4555858
+bundleId: 4555992
 url: https://meghansaha.shinyapps.io/TarotreadR/
-when: 1620139021.00918
+when: 1620141052.95645
 asMultiple: FALSE
 asStatic: FALSE
